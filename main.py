@@ -22,6 +22,17 @@ async def create_item(todo: ToDo):
         MEMORY.append(todo)
         return todo
 
-@app.get("/todo/latest")
+
+@app.get("/todo/last")
+async def get_latest_item():
+    return MEMORY[-1]
+
+
+@app.get("/todo/first")
+async def get_latest_item():
+    return MEMORY[0]
+
+
+@app.get("/todo/all")
 async def get_latest_item():
     return MEMORY
