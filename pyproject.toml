@@ -1,0 +1,15 @@
+[project]
+name = "my-simple-service"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.115.12",
+    "sqlmodel[all]>=0.0.24",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.11.13",
+]
