@@ -14,7 +14,7 @@ MEMORY: List[ToDo] = [ToDo(name="default")]
 @app.post("/todo/")
 async def create_item(todo: ToDo):
     if todo.description is not None:
-        todo_dict = todo.dict()
+        todo_dict = todo.model_dump()
         todo_dict["description_len"] = len(todo.description)
         MEMORY.append(ToDo(**todo_dict))
         return todo_dict
