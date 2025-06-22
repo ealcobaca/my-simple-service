@@ -1,3 +1,7 @@
+# local files and folders
+bruno/
+my-database.db
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
